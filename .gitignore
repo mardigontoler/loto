@@ -1,0 +1,7 @@
+*env*
+*.pyc
+*cahce*
+build
+dist
+loto.egg-info
+.vscode
