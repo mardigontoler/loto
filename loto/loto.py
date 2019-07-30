@@ -31,6 +31,6 @@ class LockoutTagout:
         @wraps(wrappedFunc)  # make the wrapped look like original
         def lockedCall(*args, **kwargs):
             with LockoutTagout.locks[self.tag]:
-                wrappedFunc(*args, **kwargs)
+                return wrappedFunc(*args, **kwargs)
         lockedCall._loto_tag = self.tag
         return lockedCall
